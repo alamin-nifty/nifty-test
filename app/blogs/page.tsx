@@ -1,6 +1,6 @@
 import Blogs from "@/Components/Blogs/Blogs";
 
-export const getPosts = async () => {
+const getPosts = async () => {
   const res = await fetch("https://niftyitsolution.com/api/blogs");
   const data = await res.json();
   return data;

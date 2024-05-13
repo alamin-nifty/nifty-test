@@ -1,4 +1,4 @@
-export const getBlogById = async (blogSlug: string) => {
+const getBlogById = async (blogSlug: string) => {
   const res = await fetch(`https://niftyitsolution.com/api/blogs/${blogSlug}`);
   const data = await res.json();
   return data;
