@@ -1,4 +1,4 @@
-import Blogs from "@/Components/Blogs/Blogs";
+import Blogs from "@/components/Blogs/Blogs";
 
 const getPosts = async () => {
   const res = await fetch("https://niftyitsolution.com/api/blogs");
