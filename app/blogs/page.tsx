@@ -1,10 +1,11 @@
 import Blogs from "@/components/Blogs/Blogs";
+import { cache } from "react";
 
-const getPosts = async () => {
+const getPosts = cache(async () => {
   const res = await fetch("https://niftyitsolution.com/api/blogs");
   const data = await res.json();
   return data;
-};
+});
 
 const page = async (props: any) => {
   const data = await getPosts();
