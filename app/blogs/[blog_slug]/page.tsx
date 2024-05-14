@@ -14,7 +14,7 @@ const page = async ({ params }: { params: { blog_slug: string } }) => {
         <img src={data.imgUrl} alt="image" />
       </div>
       <div>
-        <h1 className="text-2xl my-5">{data.metaDescription}</h1>
+        <h1 className="text-2xl my-5">{data.metaDescription}pro</h1>
         <p>{data.shortDescription}</p>
       </div>
     </div>
