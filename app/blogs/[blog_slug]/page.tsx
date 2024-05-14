@@ -1,5 +1,7 @@
 const getBlogBySlug = async (slug: string) => {
-  const res = await fetch(`${process.env.PRODUCTION_URL}api/blogs/${slug}`);
+  const res = await fetch(`${process.env.PRODUCTION_URL}/api/blogs/${slug}`, {
+    cache: "force-cache",
+  });
   const data = await res.json();
   console.log(data);
   return data;
@@ -14,7 +16,10 @@ const page = async ({ params }: { params: { blog_slug: string } }) => {
         <img src={data.imgUrl} alt="image" />
       </div>
       <div>
-        <h1 className="text-2xl my-5">{data.metaDescription}pro</h1>
+        <h1 className="text-2xl my-5">
+          {data.metaDescription}
+          {Math.random().toFixed(2) + 1}
+        </h1>
         <p>{data.shortDescription}</p>
       </div>
     </div>
