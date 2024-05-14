@@ -1,5 +1,5 @@
 const getBlogBySlug = async (slug: string) => {
-  const res = await fetch(`/api/blogs/${slug}`);
+  const res = await fetch(`${process.env.PRODUCTION_URL}api/blogs/${slug}`);
   const data = await res.json();
   console.log(data);
   return data;
