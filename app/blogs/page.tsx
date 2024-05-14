@@ -4,7 +4,6 @@ const getPosts = async () => {
   try {
     const res = await fetch(`${process.env.PRODUCTION_URL}/api/blogs`);
     const data = await res.json();
-
     return data;
   } catch (err) {
     console.log(err);
